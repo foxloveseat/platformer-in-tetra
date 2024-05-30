@@ -1,5 +1,9 @@
-
-use tetra::*;
+use tetra::{
+    graphics::{self, *},
+    input::*,
+    math::{self, vec2, Vec2},
+    window, Context, ContextBuilder, State,
+};
 
 fn main() -> tetra::Result {
     ContextBuilder::new("Hello", 900, 800)
@@ -18,10 +22,7 @@ impl GameState {
     }
 }
 
-
 struct Player {
     position: Vec2<f32>,
-    velocity: Vec2<f32>
+    velocity: Vec2<f32>,
 }
-
-
